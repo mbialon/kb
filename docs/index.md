@@ -1,3 +1,3 @@
 # Home
 
-TODO
+Personal knowledge base.
