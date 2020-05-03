@@ -1,5 +1,11 @@
 # Go
 
+## Packages
+
+### Testing
+
+- [github.com/frankban/quicktest](github.com/frankban/quicktest)
+
 ## Min/max integer values
 
 ```
