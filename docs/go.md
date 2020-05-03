@@ -4,7 +4,11 @@
 
 ### Testing
 
-- [github.com/frankban/quicktest](github.com/frankban/quicktest)
+- [github.com/frankban/quicktest](https://github.com/frankban/quicktest)
+
+### Embed static assets
+
+- [github.com/gobuffalo/packr/](https://github.com/gobuffalo/packr/)
 
 ## Min/max integer values
 
