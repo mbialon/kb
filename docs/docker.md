@@ -68,7 +68,8 @@ ports:
 ## Install packages via apt-get
 
 ```
-RUN apt-get update && apt-get install -y \
+DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y --no-install-recommends \
     aufs-tools \
     automake \
     build-essential \
