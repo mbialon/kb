@@ -156,3 +156,24 @@ if err != nil {
 hook.SetLevels(logrus.AllLevels)
 logrus.AddHook(hook)
 ```
+
+## Cancel context.Context when a signal arrives
+
+```
+func WithSignal(parent context.Context, sig ...os.Signal) (context.Context, context.CancelFunc) {
+	ctx, cancel := context.WithCancel(parent)
+	c := make(chan os.Signal, 1)
+	signal.Notify(c, sig...)
+	go func() {
+		select {
+		case <-ctx.Done():
+		case <-c:
+			cancel()
+		}
+	}()
+	return ctx, func() {
+		signal.Stop(c)
+		cancel()
+	}
+}
+```
