@@ -46,6 +46,22 @@ h.Write(b)
 sum := h.Sum(nil)
 ```
 
+## Running tests as root
+
+```
+go test -exec sudo -v ./...
+```
+
+If running from a script (e.g. in CI)
+
+```
+go test -exec "sudo -n" ...
+```
+
+### Links
+
+- https://twitter.com/kolyshkin/status/1367697997979557897
+
 ## Compile to ARM with CGO
 
 Install support programs
