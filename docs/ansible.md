@@ -27,3 +27,7 @@ handlers:
     when: item.changed
     loop: config_files.results
 ```
+
+## Module architecture
+
+[https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html#argument-spec](https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html#argument-spec)
