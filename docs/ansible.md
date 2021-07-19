@@ -13,6 +13,7 @@ tasks:
       src: "config/{{ item }}.yml"
       dest: "{{ ansible_user_dir }}/config/{{ item }}.yml"
     loop: "{{ config_names }}"
+    when: config_names | length > 0
     register: config_files
     notify:
       - Restart service
