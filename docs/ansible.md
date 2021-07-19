@@ -2,7 +2,14 @@
 
 ## Raw module
 
-[https://docs.ansible.com/ansible/latest/modules/raw_module.html](https://docs.ansible.com/ansible/latest/modules/raw_module.html)
+```
+- name: Bootstrap a host without python2 installed
+  raw: dnf install -y python2 python2-dnf libselinux-python
+```
+
+Links:
+
+- [https://docs.ansible.com/ansible/latest/modules/raw_module.html](https://docs.ansible.com/ansible/latest/modules/raw_module.html)
 
 ## Loops and handlers
 
@@ -31,7 +38,8 @@ handlers:
 
 ## Module architecture
 
-[https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html#argument-spec](https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html#argument-spec)
+Links:
+- [https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html#argument-spec](https://docs.ansible.com/ansible/latest/dev_guide/developing_program_flow_modules.html#argument-spec)
 
 ## Manage lines in text files
 
@@ -43,7 +51,9 @@ handlers:
     line: SELINUX=enforcing
 ```
 
-[ansible.builtin.lineinfile](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/lineinfile_module.html)
+Links:
+
+- [ansible.builtin.lineinfile](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/lineinfile_module.html)
 
 ## Format data to JSON and YAML
 
@@ -62,4 +72,6 @@ handlers:
    notify: restart docker
 ```
 
-[formatting-data-yaml-and-json](https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html#formatting-data-yaml-and-json)
+Links:
+
+- [formatting-data-yaml-and-json](https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html#formatting-data-yaml-and-json)
