@@ -44,3 +44,22 @@ handlers:
 ```
 
 [ansible.builtin.lineinfile](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/lineinfile_module.html)
+
+## Format data to JSON and YAML
+
+- `to_json`
+- `to_yaml`
+- `to_nice_json`
+- `to_nice_yaml`
+
+```
+- name: Configure Docker daemon options.
+   copy:
+     content: "{{ docker_daemon_options | to_nice_json }}"
+     dest: /etc/docker/daemon.json
+     mode: 0644
+   when: docker_daemon_options.keys() | length > 0
+   notify: restart docker
+```
+
+[formatting-data-yaml-and-json](https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html#formatting-data-yaml-and-json)
