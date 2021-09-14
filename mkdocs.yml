@@ -1,9 +1,15 @@
 ---
 site_name: KB
+
 theme:
   name: material
   palette:
     scheme: default
+
 markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
+
+repo_url: https://github.com/mbialon/kb
+repo_name: mbialon/kb
+edit_uri: edit/main/docs/
