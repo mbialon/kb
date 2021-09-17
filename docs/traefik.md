@@ -2,7 +2,7 @@
 
 ## Proxy to external service with TLS
 
-!!! example docker-compose.yml
+!!! example "docker-compose.yml"
     ```
     ---
     version: "2.4"
@@ -28,7 +28,7 @@
           - "443:443"
     ```
 
-!!! example config.yml
+!!! example "config.yml"
     ```
     ---
     http:
