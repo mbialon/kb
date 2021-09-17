@@ -35,7 +35,7 @@
       routers:
         grafana:
           service: grafana
-          rule: Host(`grafana.gofer.dev
+          rule: Host(`grafana.gofer.dev`)
           tls:
             certResolver: resolver
 
