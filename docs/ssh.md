@@ -13,6 +13,12 @@ IdentityFile ~/.ssh/id_rsa
 scp -P 40404 test root@example.com:/tmp
 ```
 
+## enable ssh connection from the server
+
+```
+ssh -nN -o ExitOnForwardFailure=yes -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -R 3001:localhost:22 user@example.com
+```
+
 ## sshfs
 
 - [How To Use SSHFS to Mount Remote File Systems Over SSH | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh)
