@@ -21,6 +21,13 @@ const MinInt = -MaxInt - 1
 
 [https://groups.google.com/group/golang-nuts/msg/71c307e4d73024ce?pli=1](https://groups.google.com/group/golang-nuts/msg/71c307e4d73024ce?pli=1)
 
+## Static build
+```
+-ldflags '-extldflags "-fno-PIC -static"' -buildmode pie -tags 'osusergo netgo static'
+```
+
+- [https://github.com/golang/go/issues/26492](https://github.com/golang/go/issues/26492)
+
 ## Reduce binary size by stripping debugging symbols
 
 ```
