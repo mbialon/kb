@@ -49,12 +49,12 @@ resource "cloudflare_pages_project" "kb" {
   deployment_configs {
     preview {
       environment_variables = {
-        PYTHON_VERSION = "3.7"
+        PYTHON_VERSION = "3.11"
       }
     }
     production {
       environment_variables = {
-        PYTHON_VERSION = "3.7"
+        PYTHON_VERSION = "3.11"
       }
     }
   }
