@@ -14,3 +14,10 @@ updates:
       interval: "weekly"
     reviewers:
       - "mbialon"
+
+  - directory: /infra
+    package-ecosystem: terraform
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "mbialon"
